@@ -125,10 +125,16 @@ public class User {
 				following.size(),following);
 		System.out.printf("粉丝: %d\t  %s\n",
 				followers.size(),followers);
+		System.out.printf("消息[%d]: %s\n",
+				message.size(),message);
 		System.out.println("----------------------");
 	}
+
 	
-	
+	public void send(Message m) {
+		m.setAuthor(this);
+		message.add(m);	
+	}
 	
 	
 	
